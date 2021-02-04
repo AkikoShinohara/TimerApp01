@@ -6,7 +6,8 @@ import android.os.Handler
 import android.view.View
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+abstract class MainActivity : AppCompatActivity() {
+
     // 一度だけ代入するものはvalを使う //
     val handler = Handler()
     // 繰り返し代入するためvarを使う //
@@ -39,10 +40,29 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        fun startTap(view: View) {
+            handler.post(runnable)
+        }
 
+        fun stopTap(view: View) {
+            handler.removeCallbacks(runnable)
+        }
     }
 
-    fun stopTap(view: View) {}
+}
+// 数値を00:00:00形式の文字列に変換する関数
+// 引数timeはデフォルト値0を設定、返却する型はnullableなString?型
 
-
+private fun timeToText(time: Int = 0): String? {
+    // if式はたいを返すため、そのままreturnできる
+    return if (time < 0) {
+        null
+    } else if (time == 0) {
+        "00:00:00"
+    } else {
+        val h = time / 3600
+        val m = time % 3600 / 60
+        val s = time % 60
+        "%1$02d:%2$02d:%3$02d".format(h, m, s)
+    }
 }
