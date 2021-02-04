@@ -36,8 +36,8 @@
             android:clickable="true"
             android:gravity="center_horizontal"
             android:paddingTop="25dp"
-            android:text="Start"
-            android:textColor="#FFFFFB"
+            android:text="@string/t_v01"
+            android:textColor="@color/t_v01"
             android:textSize="30sp"
             tools:ignore="OnClick" />
 
@@ -49,8 +49,8 @@
             android:background="@drawable/shape_radius02"
             android:onClick="stopTap"
             android:clickable="true"
-            android:text="Stop"
-            android:textColor="#FEDFE1"
+            android:text="@string/t_v02"
+            android:textColor="@color/t_v02"
             android:textSize="30sp"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
