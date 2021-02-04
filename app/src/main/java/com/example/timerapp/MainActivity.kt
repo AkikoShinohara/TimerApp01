@@ -3,6 +3,7 @@ package com.example.timerapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -40,6 +41,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun stopTap(view: View) {}
 
 
 }
