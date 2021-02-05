@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TimerApp01</string>
-    <string name="t_v01">Start</string>
-    <string name="t_v02">Stop</string>
+    <string name="t_v01">start</string>
+    <string name="t_v02">stop</string>
 </resources>
