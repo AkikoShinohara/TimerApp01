@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="t_v01">#FFFFFB</color>
-    <color name="t_v02">#FEDFE1</color>
+    <color name="t_v02">#FFFFFB</color>
+    <color name="t_v03">#FEDFE1</color>
 </resources>

@@ -2,4 +2,5 @@
     <string name="app_name">TimerApp01</string>
     <string name="t_v01">start</string>
     <string name="t_v02">stop</string>
+    <string name="t_v03">reset</string>
 </resources>

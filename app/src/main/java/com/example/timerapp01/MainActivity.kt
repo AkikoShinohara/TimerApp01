@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val timeText = findViewById<TextView>(R.id.timeText)
         val startTap = findViewById<TextView>(R.id.tV)
         val stopTap = findViewById<TextView>(R.id.tV2)
+        val resetTap = findViewById<TextView>(R.id.tV3)
 
         //1秒ごとに処理を実行
         val runnable = object : Runnable {
@@ -41,6 +42,16 @@ class MainActivity : AppCompatActivity() {
         stopTap.setOnClickListener {
             handler.removeCallbacks(runnable)      // stop クリック処理
         }
+
+        resetTap.setOnClickListener {
+            handler.removeCallbacks(runnable)      // カウンターキャンセル
+            timeValue = 0                          // 秒カウンタークリア
+            // TimeToText()で表示データ作り
+            timeToText()?.let {
+                timeText.text = it                 // timeTextに表示
+            }
+        }
+
 
     }
 
